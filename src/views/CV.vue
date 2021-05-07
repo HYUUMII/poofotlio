@@ -16,7 +16,7 @@
           x-large
           color="#FF25AF"
           onclick="location.href='https://i.imgur.com/0iq3pwc.png';"
-        >MY CV IN PDF</v-btn>
+        >MY CV IN TEXT</v-btn>
         </div>
 
  
