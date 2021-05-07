@@ -1,17 +1,20 @@
-<template>
+ <template>
   <div class="Home">
     <div id="home">
       <div>
         <div id="h1">
           <h1>
             Hi, I'm a<br />
-            Multimedia <mark class="pink">Designer</mark><br />
-            Hobbyist <mark class="pink">Artist</mark> and Webtoon
-            <mark class="pink">Creator</mark><br />
+            Multimedia <span class="pink">Designer<br /></span>
+            Hobbyist <span class="pink">Artist</span> and Webtoon
+            <span class="pink">Creator<br /></span>
           </h1>
-          <button id="cvbutton">
-            <router-link to="/CV">Check out my CV > </router-link>
-          </button>
+
+          <v-btn id="cv">
+              <router-link to="/CV">Check out my CV > </router-link></v-btn>
+          
+          
+      
         </div>
       </div>
 
@@ -29,7 +32,6 @@
 
 <script>
 // @ is an alias to /src
-
 export default {
   name: "Home",
   components: {},
@@ -42,8 +44,8 @@ export default {
 #home {
   display: flex;
   align-items: center;
-  padding-top: 100px;
-  margin-left: 140px;
+  padding-top: 150px;
+  margin-left: 175px;
 }
 
 #vector {
@@ -52,23 +54,34 @@ export default {
   justify-content: space-evenly;
 }
 
-#cvbutton {
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #FF25AF;
+#cv {
   display: flex;
   justify-content: flex-start;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #FF25AF;
+  border: none;
   
   
 }
+
+
+
+
+
+      
+
+
+
+
+
 a {
     text-decoration: none !important;
-    color: map-get($Colorscheme, Tertiary);
+    color: white !important;
     font-family: "Poppins";
     font-weight: medium;
-    
-    
   }
+
 h1 {
   color: white;
   size: 50px;
@@ -76,8 +89,12 @@ h1 {
   padding-right:170px;
 }
 
-mark.pink {
+.v-application .pink, .pink {
+  
   color: #ff25af;
-  background: none;
+  background: none !important;
+  background-color: none !important;
 }
+
+
 </style>

@@ -26,7 +26,7 @@ export default {};
 <style lang="scss" scoped>
 @import './src/styles/variables.scss';
 #header {
-  box-shadow: 0px 10px 60px rgb(75, 75, 75);
+  
   padding-right: 100px;
   padding-left: 100px;
   background-color:map-get($Colorscheme, backgroundcol);
@@ -35,7 +35,7 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 70px;
   padding: 20px;
   
@@ -51,7 +51,7 @@ export default {};
 
 a {
   font-family: "Poppins", sans-serif;
-  color: #616161;
+  color: #616161 !Important;
   font-weight: lighter;
   font-size: 15px;
   text-align: center;

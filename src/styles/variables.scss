@@ -4,5 +4,11 @@ $Colorscheme: (
     Tertiary:#FF25AF,
     backgroundcol: white,
 
-)
+);
 
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
