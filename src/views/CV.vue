@@ -2,12 +2,26 @@
   <div class="CV">
     <div id="CV">
 
-
-
+      
       <div class="resp-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/u1aLDw-QM64" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+ 
+    <div id="MyButton">
+      <v-btn
+        elevation="2"
+        rounded
+        dark
+          x-large
+          color="#FF25AF"
+          onclick="location.href='https://i.imgur.com/0iq3pwc.png';"
+        >MY CV IN PDF</v-btn>
+        </div>
+
+ 
+
+
      
     </div>
   </div>
@@ -55,11 +69,28 @@ h1 {
 #CV {
   padding-bottom:100px  !important;
   padding-left: 200px;
-  margin-left:250px;
-  margin-bottom: 100px;
+  margin-left:200px;
+  
  display: flex;
  justify-content: center;
+ 
   }
+
+
+#MyButton {
+
+  padding-bottom: 140px;
+  margin-left:30px;
+
+
+  display:flex;
+  align-items: flex-end;
+  justify-content:space-between;
+
+
+}
+
+  
 
   
 
