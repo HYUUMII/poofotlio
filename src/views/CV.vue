@@ -1,14 +1,10 @@
 <template>
-  <div class="CV">
-    <div id="CV">
-
-      
-      <div class="resp-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/u1aLDw-QM64" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="CV"><img id="imgtop" src="../assets/vectorbg.svg" alt="" />
+    <div class="centering" id="cvcontent">
+      <div class="container"> 
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/u1aLDw-QM64"></iframe>
 </div>
- 
-    <div id="MyButton">
+      <div><div id="MyButton">
       <v-btn
         elevation="2"
         rounded
@@ -17,12 +13,7 @@
           color="#FF25AF"
           onclick="location.href='https://i.imgur.com/0iq3pwc.png';"
         >MY CV IN TEXT</v-btn>
-        </div>
-
- 
-
-
-     
+        </div></div>
     </div>
   </div>
 </template>
@@ -39,59 +30,69 @@ export default {
 <style lang="scss" scoped>
 @import "./src/styles/variables.scss";
 
-
-
-#About {
+.CV {
+  padding: 50px 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-h1 {
-  color: rgb(255, 255, 255);
-  font-size: 100px;
-  text-align: right;
-}
-
-.v-application .pink,
-.pink {
-  color: #ff25af;
-  background: none !important;
-  background-color: none !important;
-}
-
-
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-
-#CV {
-  padding-bottom:100px  !important;
-  padding-left: 200px;
-  margin-left:200px;
-  
+  align-items: center;
+  height: 100vh;
+  @media (min-width: 768px) {
  display: flex;
+ flex-direction: row;
  justify-content: center;
- 
+ align-items: center;
   }
+}
+#imgtop {
+  position: absolute;
+    z-index: 0;
+    top: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+  }
+.CV.router {
+  position: static  !important;
+}
 
+#cvcontent {
+  flex-direction: column;
+  max-width: 800px;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
+}
 
 #MyButton {
-
-  padding-bottom: 140px;
-  margin-left:30px;
-
-
-  display:flex;
-  align-items: flex-end;
-  justify-content:space-between;
-
-
+ margin: 20px;
+display:flex;
+  align-items: center;
+  justify-content:center;
+  @media (min-width: 1000px) {
+    margin-top: 50%;
+  }
 }
 
   
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
 
+.responsive-iframe {
+ 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
   
 
 </style>

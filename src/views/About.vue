@@ -1,129 +1,63 @@
 <template>
   <div class="About">
     <div id="About">
-    
-     <div id="Art1">
-        <img
-          src="../assets/assignmentLauraA4.png"
-          height="300px"
-          width="300px"
-          alt=""
-        />
+      <div class="artdivs" id="Art1">
+        <img src="../assets/assignmentLauraA4.png" alt="" />
       </div>
-
-      <div id="Art2">
-        <img
-          src="../assets/The Great Auk on Iceberg.png"
-          height="300px"
-          width="250px"
-          alt=""
-        />
+      <div class="artdivs" id="Art2">
+        <img src="../assets/The Great Auk on Iceberg.png" alt="" />
       </div>
-
-      <div id="Art3">
-        <img
-          src="../assets/strawberry squidd.png"
-          height="300px"
-          width="250px"
-          alt=""
-        />
-      </div> 
-
+      <div class="artdivs" id="Art3">
+        <img src="../assets/strawberry squidd.png" alt="" />
       </div>
-      <div id="About2">   
-
-      <div id="Art4">
-        <img
-          src="../assets/Ellie_Illustration_jpg.jpg"
-          height="250px"
-          width="250px"
-          alt=""
-        />
-      </div> 
-
-    
-
-      <div id="Art5">
-        <img
-          src="../assets/Thumbnail_edit.png"
-          height="250ppx"
-          width="250px"
-          alt=""
-        />
+      <div class="artdivs" id="Art4">
+        <img src="../assets/Ellie_Illustration_jpg.jpg" alt="" />
       </div>
-
-      <div id="Art6">
-        <img
-          src="../assets/OnADateJPG.jpg"
-          height="250ppx"
-          width="250px"
-          alt=""
-        />
+      <div class="artdivs" id="Art5">
+        <img src="../assets/Thumbnail_edit.png" alt="" />
       </div>
-
+      <div class="artdivs" id="Art6">
+        <img src="../assets/OnADateJPG.jpg" alt="" />
       </div>
-
-
-    
-  
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-
 export default {
-  name: 'About',
-  components: {
-    
-  }
-}
+  name: "About",
+  components: {},
+};
 </script>
 
 <style lang="scss" scoped>
-@import './src/styles/variables.scss';
-
+@import "./src/styles/variables.scss";
 
 #About {
-display:flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-padding-left: 300px;
- padding-top:100px;
-
-}
-
-#About2 {
-  padding-left: 300px;
-  padding-top:50px;
-display:flex;
-flex-direction: row-reverse;
-align-items: center;
-justify-content: space-between;
-
-}
-
-
-
-h1 {
-  padding-top:100px;
-  padding-left:150x;
-  margin-top: 150px;
-  margin-bottom: 150x;
-  margin-left: 200px;
-  color: rgb(255, 255, 255);
-  font-size: 100px;
-  text-align: right;
-  }
-  
-
-  #Art1 {
   display: flex;
-  background-position: center top;
-  justify-content: space-evenly;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+  .artdivs {
+    padding: 5%;
+    img {
+      max-height: 250px;
+      width: auto;
+      @media (min-width: 1000px) {
+        max-height: 350px;
+      }
+  } 
+  }
 }
+
+
+
+
+
 
 </style>
 

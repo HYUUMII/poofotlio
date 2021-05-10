@@ -8,11 +8,33 @@
         </div>
 
         <div class="flex" id="header2">
-          <div id="Home"><router-link to="/">Home</router-link></div>
+          <div class="w3-container">
+            <div class="w3-dropdown-hover" id="hover">
+              <button class="w3-button"><v-icon>mdi-arrow-down-drop-circle</v-icon></button>
+              <div id="dropdownhover" class="w3-dropdown-content w3-bar-block w3-card-4">
+                <div id="Home">
+                  <router-link to="/">Home</router-link>
+                </div>
+                <div id="PnA">
+                  <router-link to="/About">Projects and Art</router-link>
+                </div>
+                <div id="CV">
+                  <router-link to="/CV">My CV</router-link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="normalnav">
+          <div id="Home">
+            <router-link to="/">Home</router-link>
+          </div>
           <div id="PnA">
             <router-link to="/About">Projects and Art</router-link>
           </div>
-          <div id="CV"><router-link to="/CV">My CV</router-link></div>
+          <div id="CV">
+            <router-link to="/CV">My CV</router-link>
+          </div>
+          </div>
         </div>
       </div>
     </div>
@@ -24,12 +46,30 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import './src/styles/variables.scss';
+@import "./src/styles/variables.scss";
+.w3-dropdown-hover:first-child, .w3-dropdown-click:hover {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+#normalnav{
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    
+  }
+}
+.w3-container {
+  #dropdownhover {
+    margin-left: -70px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+    
+  }
+}
 #header {
-  
-  padding-right: 100px;
-  padding-left: 100px;
-  background-color:map-get($Colorscheme, backgroundcol);
+  padding-right: 10%;
+  padding-left: 10%;
+  background-color: map-get($Colorscheme, backgroundcol);
 }
 #header1 {
   display: flex;
@@ -37,26 +77,25 @@ export default {};
   align-items: center;
   background-color: rgb(255, 255, 255);
   height: 70px;
-  padding: 20px;
-  
+  padding: 2%;
 }
 
 #header2 {
-  min-width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 a {
   font-family: "Poppins", sans-serif;
-  color: #616161 !Important;
+  color: #616161 !important;
   font-weight: lighter;
-  font-size: 15px;
-  text-align: center;
+  font-size: 12px;
+  white-space: nowrap;
   text-decoration: none;
-
+}
+#Home, #Pna, #CV {
+  margin: 0 10%;
 }
 
 .flex {

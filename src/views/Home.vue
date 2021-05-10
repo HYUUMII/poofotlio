@@ -1,30 +1,21 @@
  <template>
   <div class="Home">
     <div id="home">
-      <div>
-        <div id="h1">
-          <h1>
-            Hi, I'm a<br />
-            Multimedia <span class="pink">Designer<br /></span>
-            Hobbyist <span class="pink">Artist</span> and Webtoon
-            <span class="pink">Creator<br /></span>
-          </h1>
-
-          <v-btn id="cv">
-              <router-link to="/CV">Check out my CV > </router-link></v-btn>
-          
-          
-      
-        </div>
-      </div>
-
       <div id="Vector">
-        <img
-          src="../assets/myvectorart.png"
-          height="450px"
-          width="480px"
-          alt=""
-        />
+        <img src="../assets/myvectorart.png" />
+      </div>
+      <div id="textbtn">
+        <div id="h1"><h1>
+          Hi, I'm a<br />
+          Multimedia <span class="pink">Designer<br /></span> Hobbyist
+          <span class="pink">Artist</span> and Webtoon
+          <span class="pink">Creator<br /></span>
+        </h1>
+        </div>
+
+        <v-btn id="cv">
+          <router-link to="/CV">Check out my CV > </router-link>
+          </v-btn>
       </div>
     </div>
   </div>
@@ -42,59 +33,71 @@ export default {
 @import "./src/styles/variables.scss";
 
 #home {
-  display: flex;
-  align-items: center;
-  padding-top: 150px;
-  margin-left: 175px;
+  margin: 0 auto;
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-#vector {
-  display: flex;
-  background-position: center top;
-  justify-content: space-evenly;
+#Vector {
+  padding: 20px;
+  img {
+    width: 100%;
+    max-width: 400px;
+    @media (min-width: 1024px) {
+    max-width: 800px;
+    padding: 50px;
+  }
+  }
 }
 
 #cv {
-  display: flex;
-  justify-content: flex-start;
+    margin: 20px;
+
+  
   border-radius: 10px;
   margin-top: 20px;
-  background-color: #FF25AF;
+  background-color: #ff25af;
   border: none;
-  
-  
 }
-
-
-
-
-
-      
-
-
-
-
 
 a {
-    text-decoration: none !important;
-    color: white !important;
-    font-family: "Poppins";
-    font-weight: medium;
+  text-decoration: none !important;
+  color: white !important;
+  font-family: "Poppins";
+  font-weight: medium;
+}
+#textbtn {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .v-btn {
+    justify-content: flex-start;
+    width: 200px;
   }
-
-h1 {
+}
+#h1 {
+  padding: 20px;
+  margin: 0 auto;
   color: white;
   size: 50px;
+  h1 {
   text-align: left;
-  padding-right:170px;
+  font-family: "Poppins";
+  font-weight: medium;
+  }
+  
 }
 
-.v-application .pink, .pink {
-  
+.v-application .pink,
+.pink {
   color: #ff25af;
   background: none !important;
   background-color: none !important;
 }
-
-
 </style>
