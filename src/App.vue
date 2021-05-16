@@ -27,10 +27,11 @@ components: {
 <style lang="scss">
 @import './src/styles/variables.scss';
 #app {
-  font-family: Poppins, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  
   //background-color: map-get($Colorscheme, Primary);
 }
 #nav {
